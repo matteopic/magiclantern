@@ -4,7 +4,7 @@ FROM ubuntu:17.04
 MAINTAINER matteopic
 
 RUN apt-get update && \
-    apt-get install mercurial sudo wget -yq && \
+    apt-get install mercurial sudo wget zip -yq && \
 	cd /usr/src && \ 
 	hg clone -u unified https://bitbucket.org/shadowfax/magic-lantern
 
