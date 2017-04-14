@@ -1,0 +1,18 @@
+@@ -25,14 +25,14 @@
+  
+ # adjust these for your needs (note final slash):
+ #$path = "$ENV{'HOME'}/gcc-4.1-arm/bin/";
+-$path = "";
++$path = "$ENV{'HOME'}/gcc-arm-none-eabi-4_8-2013q4/bin/";
+  
+ # note on "strings": default is a minimum length of 4 chars.
+ # So if u are hunting for e.g. "FI2" add -n3
+ # However, it gives a lot of false positive.
+ $strdump = "strings -t x";
+-$objdump = "${path}arm-elf-objdump";
+-$objcopy = "${path}arm-elf-objcopy";
++$objdump = "${path}arm-none-eabi-objdump";
++$objcopy = "${path}arm-none-eabi-objcopy";
+  
+ if (@ARGV != 2) {
+  die("Usage: $0 0x<offset> <dump.bin>");
